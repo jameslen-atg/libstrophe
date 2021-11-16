@@ -44,7 +44,7 @@ extern "C" {
         memcpy(&(x), y, 8); \
     } while (0)
 
-#elif defined(__LITTLE_ENDIAN__) ||                                 \
+#elif defined(_WIN32) || defined(__LITTLE_ENDIAN__) ||                                 \
     (defined(__BYTE_ORDER__) && defined(__ORDER_LITTLE_ENDIAN__) && \
      __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__)
 

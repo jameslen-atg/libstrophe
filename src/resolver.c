@@ -943,8 +943,8 @@ resolver_win32_srv_query(const char *fulldomain, unsigned char *buf, size_t len)
                 memset(&dnsaddr, 0, sizeof(dnsaddr));
 
                 dnsaddr.sin_family = AF_INET;
+                inet_pton(AF_INET, dnsserverips[i], &dnsaddr);
                 dnsaddr.sin_port = htons(53);
-                dnsaddr.sin_addr.s_addr = inet_addr(dnsserverips[i]);
 
                 addrlen = sizeof(dnsaddr);
                 sendto(sock, (char *)buf, offset, 0,

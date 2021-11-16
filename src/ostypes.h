@@ -19,7 +19,8 @@
 
 #include <stddef.h> /* size_t */
 
-#if defined(_MSC_VER) && _MSC_VER < 1600
+#if defined(_MSC_VER)
+#if _MSC_VER < 1600
 typedef signed char int8_t;
 typedef short int int16_t;
 typedef int int32_t;
@@ -39,7 +40,9 @@ typedef unsigned __int64 uint64_t;
 #ifndef SIZE_MAX
 #define SIZE_MAX UINT32_MAX
 #endif /* SIZE_MAX */
-
+#else
+#include <stdint.h>
+#endif
 #else
 #include <stdint.h>
 #endif
