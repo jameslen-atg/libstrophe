@@ -1,0 +1,10 @@
+{
+    "name": "libstrophe",
+    "version-string": "0.0.0.0",
+    "port-version": 0,
+    "description": "XMPP Client library",
+    "dependencies": [
+        "libxml2",
+        "openssl"
+    ]
+}
