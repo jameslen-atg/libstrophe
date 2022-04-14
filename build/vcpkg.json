@@ -5,6 +5,16 @@
     "description": "XMPP Client library",
     "dependencies": [
         "libxml2",
-        "openssl"
-    ]
+        {
+            "name": "openssl",
+            "version>=": "1.1.1n"
+        }
+    ],
+    "overrides": [
+        {
+            "name": "openssl",
+            "version-string": "1.1.1n#1"
+        }
+    ],
+    "builtin-baseline": "f95b78e0043eb80840670d0cfc7912263193654e"
 }
